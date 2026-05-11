@@ -11,4 +11,14 @@
             <class name="com.InternetBotHAck.tests.AlertTest"/>
         </classes>
     </test>
+    <test name="Checkbox Tests">
+        <classes>
+            <class name="com.InternetBotHAck.tests.CheckboxTest"/>
+        </classes>
+    </test>
+    <test name="Dropdown Tests">
+        <classes>
+            <class name="com.InternetBotHAck.tests.DropdownTest"/>
+        </classes>
+    </test>
 </suite>
