@@ -8,7 +8,7 @@ public class LoginPage extends BasePage {
     By passwordField=By.id("password");
     By loginButton=By.cssSelector("button[type='submit']");
     By flashMessage=By.id("flash");
-    By logoutButton=By.linkText("Logout");
+    By logoutButton=By.cssSelector("a[href='/logout']");
     public LoginPage(WebDriver driver) {
         this.driver=driver;
     }
