@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="InternetBot Suite">
+
+    <listeners>
+        <listener class-name="com.InternetBotHAck.listeners.TestListener"/>
+        <listener class-name="com.InternetBotHAck.listeners.ExtentReportManager"/>
+    </listeners>
+
     <test name="Login Tests">
         <classes>
             <class name="com.InternetBotHAck.tests.LoginTest"/>
@@ -24,6 +30,11 @@
     <test name="Upload Tests">
         <classes>
             <class name="com.InternetBotHAck.tests.UploadTest"/>
+        </classes>
+    </test>
+    <test name="Dynamic Tests">
+        <classes>
+            <class name="com.InternetBotHAck.tests.DynamicTest"/>
         </classes>
     </test>
 </suite>
