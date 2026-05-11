@@ -21,4 +21,9 @@
             <class name="com.InternetBotHAck.tests.DropdownTest"/>
         </classes>
     </test>
+    <test name="Upload Tests">
+        <classes>
+            <class name="com.InternetBotHAck.tests.UploadTest"/>
+        </classes>
+    </test>
 </suite>
