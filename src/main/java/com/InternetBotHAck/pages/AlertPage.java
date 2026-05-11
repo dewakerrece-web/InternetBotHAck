@@ -28,6 +28,7 @@ public class AlertPage {
         alert.accept();
     }
     public String getResultText() {
+
         return driver.findElement(resultText).getText();
     }
 }

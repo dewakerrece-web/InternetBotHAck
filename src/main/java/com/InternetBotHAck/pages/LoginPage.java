@@ -11,6 +11,7 @@ public class LoginPage extends BasePage {
     By flashMessage=By.id("flash");
     By logoutButton=By.cssSelector("a[href='/logout']");
     public LoginPage(WebDriver driver) {
+
         this.driver=driver;
     }
     public void enterUsername(String username) {
@@ -22,6 +23,7 @@ public class LoginPage extends BasePage {
         driver.findElement(passwordField).sendKeys(password);
     }
     public void clickLogin() {
+
         driver.findElement(loginButton).click();
     }
     public String getFlashMessage() {
@@ -29,6 +31,7 @@ public class LoginPage extends BasePage {
         return driver.findElement(flashMessage).getText();
     }
     public void clickLogout() {
+
         driver.findElement(logoutButton).click();
     }
 }

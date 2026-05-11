@@ -13,6 +13,7 @@ public class DynamicPage {
     By startbtn=By.xpath("//button[text()='Start']");
     By loadedText=By.xpath("//div[@id='finish']/h4");
     public DynamicPage(WebDriver driver){
+
         this.driver=driver;
     }
     public void clickStart(){
