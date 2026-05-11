@@ -28,7 +28,8 @@ public class UploadTest extends BasePage {
     @Test
     public void testPageTitle() {
         String title = up.getPageTitle();
-        Assert.assertEquals(title, "File Uploader");
+        //Assert.assertEquals(title, "Wrong title");
+        Assert.assertEquals(title,"File Uploader");
     }
 
     @Test

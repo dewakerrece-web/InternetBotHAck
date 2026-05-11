@@ -19,7 +19,7 @@ public class TestListener implements ITestListener {
         WebDriver driver = null;
 
         try {
-            driver = (WebDriver) obj.getClass().getDeclaredField("driver").get(obj);
+            driver = ((com.InternetBotHAck.base.BasePage) obj).driver;
         } catch (Exception e) {
             System.out.println("Could not get driver: " + e.getMessage());
         }

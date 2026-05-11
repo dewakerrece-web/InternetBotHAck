@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.time.Duration;
 public class BasePage {
-    protected WebDriver driver;
+    public WebDriver driver;
     protected WebDriverWait wait;
     public void initDriver() throws IOException {
         ConfigReader config = new ConfigReader();
