@@ -6,4 +6,9 @@
             <class name="com.InternetBotHAck.tests.LoginTest"/>
         </classes>
     </test>
+    <test name="Alert Tests">
+        <classes>
+            <class name="com.InternetBotHAck.tests.AlertTest"/>
+        </classes>
+    </test>
 </suite>
