@@ -24,6 +24,10 @@ public class DynamicPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loadedText));
         return driver.findElement(loadedText).getText();
     }
+    public boolean hasPageElements() {
+        return driver.findElements(
+                By.xpath("//ul/li")).size() > 0;
+    }
     public void refreshPage(){
         driver.navigate().refresh();
     }

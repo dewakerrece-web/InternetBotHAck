@@ -23,5 +23,12 @@ public class UploadPage {
     public String getPageTitle(){
         return driver.findElement(pageTitle).getText();
     }
+    public boolean isUploadFormVisible() {
+        return driver.findElement(By.id("file-upload")).isDisplayed();
+    }
+
+    public boolean isUploadBtnVisible() {
+        return driver.findElement(By.id("file-submit")).isDisplayed();
+    }
 
 }

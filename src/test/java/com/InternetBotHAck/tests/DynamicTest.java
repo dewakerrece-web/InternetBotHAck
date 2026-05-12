@@ -30,9 +30,7 @@ public class DynamicTest extends BasePage {
     public void testPageRefresh() throws IOException {
         driver.get(new ConfigReader().getBaseUrl() + "/disappearing_elements");
         dp.refreshPage();
-        boolean hasElements = driver.findElements(
-                By.xpath("//ul/li")).size() > 0;
-        Assert.assertTrue(hasElements);
+        Assert.assertTrue(dp.hasPageElements());
     }
     @AfterMethod
     public void tearDown() {

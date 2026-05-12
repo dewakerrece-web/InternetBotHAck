@@ -38,6 +38,10 @@ public class CheckboxPage {
         By selectedOption = By.xpath("//select[@id='dropdown']/option[@selected]");
         return driver.findElement(selectedOption).getText();
     }
+    public int getDropdownOptionsCount() {
+        return driver.findElements(
+                By.xpath("//select[@id='dropdown']/option")).size();
+    }
 
 
 

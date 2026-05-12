@@ -35,10 +35,8 @@ public class UploadTest extends BasePage {
     }
     @Test
     public void testUploadPageFormVisible() {
-        boolean uploadVisible = driver.findElement(By.id("file-upload")).isDisplayed();
-        boolean btnVisible = driver.findElement(By.id("file-submit")).isDisplayed();
-        Assert.assertTrue(uploadVisible);
-        Assert.assertTrue(btnVisible);
+        Assert.assertTrue(up.isUploadFormVisible());
+        Assert.assertTrue(up.isUploadBtnVisible());
     }
     @AfterMethod
     public void tearDown() {

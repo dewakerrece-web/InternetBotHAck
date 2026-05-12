@@ -38,7 +38,7 @@ public class CheckboxTest extends BasePage {
     public void testDropdownOptionsCount() throws IOException {
         driver.get(new ConfigReader().getBaseUrl() + "/dropdown");
         CheckboxPage cp2 = new CheckboxPage(driver);
-        int count = driver.findElements(By.xpath("//select[@id='dropdown']/option")).size();
+        int count = cp2.getDropdownOptionsCount();
         Assert.assertEquals(count, 3);
     }
     @AfterMethod
