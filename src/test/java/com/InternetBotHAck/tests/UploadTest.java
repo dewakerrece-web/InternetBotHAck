@@ -2,6 +2,7 @@ package com.InternetBotHAck.tests;
 import com.InternetBotHAck.base.BasePage;
 import com.InternetBotHAck.pages.UploadPage;
 import com.InternetBotHAck.utils.ConfigReader;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -31,6 +32,13 @@ public class UploadTest extends BasePage {
         up.uploadFile(filePath);
         String uploadedFile = up.getUploadedFileName();
         Assert.assertEquals(uploadedFile, "testupload.txt");
+    }
+    @Test
+    public void testUploadPageFormVisible() {
+        boolean uploadVisible = driver.findElement(By.id("file-upload")).isDisplayed();
+        boolean btnVisible = driver.findElement(By.id("file-submit")).isDisplayed();
+        Assert.assertTrue(uploadVisible);
+        Assert.assertTrue(btnVisible);
     }
     @AfterMethod
     public void tearDown() {

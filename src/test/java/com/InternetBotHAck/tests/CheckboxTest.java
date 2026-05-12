@@ -2,6 +2,7 @@ package com.InternetBotHAck.tests;
 import com.InternetBotHAck.base.BasePage;
 import com.InternetBotHAck.pages.CheckboxPage;
 import com.InternetBotHAck.utils.ConfigReader;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -32,6 +33,13 @@ public class CheckboxTest extends BasePage {
         cp.clickCheckbox2();
         boolean after = cp.isCheckbox2Selected();
         Assert.assertNotEquals(before, after);
+    }
+    @Test
+    public void testDropdownOptionsCount() throws IOException {
+        driver.get(new ConfigReader().getBaseUrl() + "/dropdown");
+        CheckboxPage cp2 = new CheckboxPage(driver);
+        int count = driver.findElements(By.xpath("//select[@id='dropdown']/option")).size();
+        Assert.assertEquals(count, 3);
     }
     @AfterMethod
     public void tearDown() {

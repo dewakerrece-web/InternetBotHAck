@@ -37,6 +37,14 @@ public class AlertTest extends BasePage {
         String result = ap.getResultText();
         Assert.assertTrue(result.contains("hello"));
     }
+    @Test
+    public void testResultClears() {
+        ap.clickAlertAndAccept();
+        String firstResult = ap.getResultText();
+        ap.clickConfirmAndDismiss();
+        String secondResult = ap.getResultText();
+        Assert.assertNotEquals(firstResult, secondResult);
+    }
     @AfterMethod
     public void tearDown() {
         quitDriver();

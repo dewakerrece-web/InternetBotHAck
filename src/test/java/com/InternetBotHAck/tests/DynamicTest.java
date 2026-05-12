@@ -2,6 +2,7 @@ package com.InternetBotHAck.tests;
 import com.InternetBotHAck.base.BasePage;
 import com.InternetBotHAck.pages.DynamicPage;
 import com.InternetBotHAck.utils.ConfigReader;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,9 +27,12 @@ public class DynamicTest extends BasePage {
         Assert.assertEquals(text, "Hello World!");
     }
     @Test
-    public void testPageRefresh() {
+    public void testPageRefresh() throws IOException {
+        driver.get(new ConfigReader().getBaseUrl() + "/disappearing_elements");
         dp.refreshPage();
-        Assert.assertTrue(driver.getCurrentUrl().contains("dynamic_loading"));
+        boolean hasElements = driver.findElements(
+                By.xpath("//ul/li")).size() > 0;
+        Assert.assertTrue(hasElements);
     }
     @AfterMethod
     public void tearDown() {

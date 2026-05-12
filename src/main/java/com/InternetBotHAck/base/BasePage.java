@@ -25,7 +25,6 @@ public class BasePage {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
-
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     }
